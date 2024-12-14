@@ -1,4 +1,6 @@
-Example C code for implementing an 2D convolution in HLS
+setup on vivado-hls
+- source: `convolution.cpp` and `convolution.h`, you can try using the top function `filter11x11_orig` or `filter11x11_strm`, but i recommend using `filter11x11_strm`.
+- testbench : `convolution_test.cpp`
 
 Files Included in this Package
 ==============================
