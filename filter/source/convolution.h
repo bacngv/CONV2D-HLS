@@ -40,4 +40,3 @@ void filter11x11_strm(
         hls::stream<data_t> &src_image, hls::stream<data_t> &dst_image);
 
 #endif // CONVOLUTION_H_ not defined
-

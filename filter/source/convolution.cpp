@@ -207,9 +207,9 @@ void filter11x11_orig(int width, int height, const data_t *src, data_t *dst)
 {
 #pragma HLS INTERFACE m_axi port=src depth=32400 // TEST_IMG_SIZE
 #pragma HLS INTERFACE m_axi port=dst depth=32400 // TEST_IMG_SIZE
-#pragma HLS INTERFACE s_axilite port=width  bundle=hls_ctrl 
-#pragma HLS INTERFACE s_axilite port=height bundle=hls_ctrl 
-#pragma HLS INTERFACE s_axilite port=return bundle=hls_ctrl 
+#pragma HLS INTERFACE s_axilite port=width  bundle=hls_ctrl
+#pragma HLS INTERFACE s_axilite port=height bundle=hls_ctrl
+#pragma HLS INTERFACE s_axilite port=return bundle=hls_ctrl
 
 #pragma HLS INLINE
 #pragma HLS DATAFLOW
@@ -226,8 +226,8 @@ void filter11x11_orig(int width, int height, const data_t *src, data_t *dst)
 void filter11x11_strm(int width, int height,
 		      hls::stream<data_t> &src, hls::stream<data_t> &dst)
 {
-#pragma HLS INTERFACE axis port=&src 
-#pragma HLS INTERFACE axis port=&dst 
+#pragma HLS INTERFACE axis port=&src
+#pragma HLS INTERFACE axis port=&dst
 
 #pragma HLS DATAFLOW
 #pragma HLS INLINE // bring loops in sub-functions to this DATAFLOW region

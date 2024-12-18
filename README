@@ -1,21 +1,12 @@
 setup on vivado-hls
+filter:
 - source: `convolution.cpp` and `convolution.h`, you can try using the top function `filter11x11_orig` or `filter11x11_strm`, but i recommend using `filter11x11_strm`.
 - testbench : `convolution_test.cpp`
 
-Files Included in this Package
-==============================
-convolution_test.cpp
-convolution.cpp
-README
+conv2d:
+- source: `conv2D.c` and `conv2D.h`, the top function is `conv2d`
+- testbench : `conv2D_test.c`
 
-Running the Design (edit x_hls.tcl to specific run steps)
-=========================================================
-vitis_hls -f run_hls.tcl
-
-This design implementation is efficient thanks to:
-- The optimal design is filter11x11_strm
-- It uses "streams": implements well in hardware
-- it shows an example of using a line buffer for efficient storage
-- It uses assert statements to state the known limit of loop bounds
-
-The test case also performs a comparison against the more intuitive coding style in filter11x11_orig
+conv2d_opt:
+- source: `conv2D.c` and `conv2D.h`, the top function is `conv2d`
+- testbench : `conv2D_test.c`
